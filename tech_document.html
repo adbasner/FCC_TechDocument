@@ -8,84 +8,114 @@
 <body>
   <nav id="navbar">
     <header id="nav-header">Javascript - Looping through arrays</header>
-    <a href="#sect1" class="nav-link">Sect1</a>
-    <a href="#sect2" class="nav-link">Sect2</a>
-    <a href="#sect3" class="nav-link">Sect3</a>
-    <a href="#sect4" class="nav-link">Sect4</a>
-    <a href="#sect5" class="nav-link">Sect5</a>
-    <a href="#sect6" class="nav-link">Sect6</a>
+    <a href="#introduction" class="nav-link">Introduction</a>
+    <a href="#For_Loop" class="nav-link">For Loop</a>
+    <a href="#While_Loop" class="nav-link">While Loop</a>
+    <a href="#Do_While_Loop" class="nav-link">Do While Loop</a>
+    <a href="#For_Each_Loop" class="nav-link">For Each Loop</a>
+    <a href="#For_Of_Loops" class="nav-link">For Of Loops</a>
   </nav>
   <main id="main-doc">
 
-    <section class="main-section" id="sect1">
-      <header>Sect1</header>
-      <p>Tech documentation goes here</p>
-      <p> 10 p's totale </p>
-      <code>This is some code</code>
-      <p> 10 p's totale </p>
-    </section>
-    
-    <section class="main-section" id="sect2">
-      <header>Sect2</header>
-      <p>Tech documentation goes here</p>
-      <p> 10 p's totale </p>
-      <code>
-        This is some code
-      </code>
-    </section>
-    
-    <section class="main-section" id="sect3">
-      <header>Sect3</header>
-      <p>Tech documentation goes here</p>
-      <p> 10 p's totale </p>
-      <code>
-        This is some code
-      </code>
-    </section>
-    
-    <section class="main-section" id="sect4">
-      <header>Sect4</header>
-      <p>Tech documentation goes here</p>
-      <p> 10 p's totale </p>
-      <code>
-        This is some code
-      </code>
-    </section>
-    
-    <section class="main-section" id="sect5">
-      <header>Sect5</header>
-      <p>Tech documentation goes here</p>
-      <p> 10 p's totale </p>
-      <code>
-        This is some code
-      </code>
-    </section>
-    
-    <section class="main-section" id="sect6">
-      <header>Sect6</header>
-      <p>Tech documentation goes here</p>
-      <p> 10 p's totale </p>
-      <code>
-        This is some code
-      </code>
+    <section class="main-section" id="introduction">
+      <header class="section-header" id="intro-header">Introduction</header>
+      <p>There are a variety of ways to loop through items in an array. These include, but are not limited to:</p>
       <ul>
-        <li>This is a list item</li>
-      </ul>
-      <ul>
-        <li>This is a list item</li>
-      </ul>
-      <ul>
-        <li>This is a list item</li>
-      </ul>
-      <ul>
-        <li>This is a list item</li>
-      </ul>
-      <ul>
-        <li>This is a list item</li>
+        <li>For Loops</li>
+        <li>While Loops</li>
+        <li>Do While Loops</li>
+        <li>For Each loops</li>
+        <li>For Of Loops</li>
       </ul>
 
     </section>
     
+    <section class="main-section" id="For_Loop">
+      <header class="section-header">For Loop</header>
+      <p>The for statement creates a loop that consists of three optional expressions, enclosed in parentheses and separated by semicolons, followed by a statement (usually a block statement) to be executed in the loop.</p>
+      <code>
+        var str = "";<br><br>
+
+        for (var i = 0; i < 9; i++) { <br>
+        &nbsp;&nbsp;str = str + i; <br>
+        } <br><br>
+
+        console.log(str); <br>
+        // expected output: "012345678" <br>
+
+      </code>
+      <p>To learn more, check out MDN: <a href=" https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for" target="_blank">For Loops</a></p>
+    </section>
+    
+    <section class="main-section" id="While_Loop">
+      <header class="section-header">While Loop</header>
+      <p>The while statement creates a loop that executes a specified statement as long as the test condition evaluates to true. The condition is evaluated before executing the statement.</p>
+      <code>
+        var n = 0;<br><br>
+
+        while (n < 3) { <br>
+        &nbsp;&nbsp;n++; <br>
+        }<br><br>
+
+        console.log(n);<br>
+        // expected output: 3 <br>
+
+      </code>
+      <p>To learn more, check out MDN: <a href=" https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/while" target="_blank">While Loops</a></p>
+      
+    </section>
+    
+    <section class="main-section" id="Do_While_Loop">
+      <header class="section-header">Do While Loop</header>
+      <p>The do...while statement creates a loop that executes a specified statement until the test condition evaluates to false. The condition is evaluated after executing the statement, resulting in the specified statement executing at least once.</p>
+      <code>
+        var n = 0;<br><br>
+
+        while (n < 3) { <br>
+        &nbsp;&nbsp;n++; <br>
+        } <br><br>
+
+        console.log(n); <br>
+        // expected output: 3 <br>
+
+      </code>
+      <p>To learn more, check out MDN: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/do...while" target="_blank">Do While Loops</a></p>
+    </section>
+    
+    <section class="main-section" id="For_Each_Loop">
+      <header class="section-header">For Each Loop</header>
+      <p>The forEach() method executes a provided function once for each array element. The forEach() method executes the provided callback once for each element present in the array in ascending order. It is not invoked for index properties that have been deleted or are uninitialized (i.e. on sparse arrays)</p>
+      <code>
+        var array1 = ['a', 'b', 'c'];<br><br>
+
+        array1.forEach(function(element) { <br>
+        &nbsp;&nbsp;console.log(element); <br>
+        }); <br><br>
+
+        // expected output: "a" <br>
+        // expected output: "b" <br>
+        // expected output: "c" <br>
+
+      </code>
+      <p>To learn more, check out MDN: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach" target="_blank">For Each Loops</a></p>
+    </section>
+    
+    <section class="main-section" id="For_Of_Loops">
+      <header class="section-header">For Of Loops</header>
+      <p>The for...of statement creates a loop iterating over iterable objects, including: built-in String, Array, Array-like objects (e.g., arguments or NodeList), TypedArray, Map, Set, and user-defined iterables. It invokes a custom iteration hook with statements to be executed for the value of each distinct property of the object.</p>
+      <code>
+        let iterable = [10, 20, 30]; <br><br>
+
+        for (let value of iterable) { <br>
+        &nbsp;&nbsp;value += 1; <br>
+        &nbsp;&nbsp;console.log(value); <br>
+        } <br>
+        // 11 <br>
+        // 21 <br>
+        // 31 <br>
+      </code>
+      <p>To learn more, check out MDN: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of" target="_blank">For Of Loops</a></p>
+    </section>
   </main>
 
 
